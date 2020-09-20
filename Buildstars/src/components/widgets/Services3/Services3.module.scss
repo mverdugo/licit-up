@@ -1,0 +1,170 @@
+.statistic {
+  background: #fff;
+  width: 100%;
+  display: flex;
+}
+
+.wrapper,
+.list_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 25%;
+  padding: 30px;
+  padding-bottom: 30px;
+  padding-top: 60px;
+}
+
+.wrapper {
+  position: relative;
+  transition: all 0.5s ease;
+  border-left: 1px solid;
+
+  &:hover {
+    background: rgb(240, 240, 240);
+
+    & .button {
+      opacity: 1;
+    }
+
+    & .extra {
+      opacity: 1;
+    }
+  }
+}
+
+.list_header {
+  overflow: hidden;
+  position: relative;
+
+  &:hover .list_front {
+    transform: translateY(-100%);
+  }
+
+  &:hover .list_back {
+    transform: translateY(0);
+  }
+
+  & .list_front,
+  & .list_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transition: all 1s ease;
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  & .list_front {
+    & i {
+      font-size: 2.5rem;
+      margin-top: 5rem;
+    }
+
+    & h3 {
+      text-align: center;
+      transition: all 0.5s ease;
+      width: 100%;
+    }
+
+    & b {
+      font-weight: 600;
+    }
+  }
+
+  & .list_back {
+    transform: translateY(100%);
+
+    & p {
+      line-height: 2.3;
+      width: 100%;
+    }
+  }
+}
+
+.extra {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: -100%;
+  opacity: 0;
+  pointer-events: none;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card {
+  & h4 {
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  & p {
+    margin-bottom: 2rem;
+  }
+
+  & .button {
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 2rem;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.negative_space {
+  display: block;
+  width: 100%;
+  background: rgb(240, 240, 240);
+}
+
+@media (max-width: 1200px) {
+  .wrapper,
+  .list_header {
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+
+  .list_header .list_front i {
+    margin-top: 3rem;
+  }
+
+  .card {
+    .icon {
+      margin-bottom: 1rem;
+    }
+
+    & h4 {
+      margin-bottom: 0.5rem;
+    }
+
+    & p {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .stat_area {
+    display: none;
+  }
+}
