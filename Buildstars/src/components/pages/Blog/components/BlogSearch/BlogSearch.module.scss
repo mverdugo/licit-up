@@ -1,0 +1,43 @@
+.search {
+  display: flex;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 5rem;
+
+  & input {
+    flex-grow: 1;
+    border: none;
+    padding: 1.8rem;
+
+    &:focus~button i {
+      color: #000;
+    }
+
+    &:focus::placeholder {
+      color: #ccc;
+    }
+
+    &::placeholder {
+      font-family: "Poppins";
+      transition: all 0.5s ease;
+
+      // Internet Explorer 11
+      @media screen and (-ms-high-contrast: active),
+      screen and (-ms-high-contrast: none) {
+        font-family: "";
+      }
+    }
+  }
+
+  & button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  & i {
+    font-size: 2rem;
+    padding-right: 1.8rem;
+    color: #ccc;
+    transition: all 0.5s ease;
+  }
+}

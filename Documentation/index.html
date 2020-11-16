@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>BuildStar Documentation</title>
+		<meta name="description" content="Documentation">
+		<meta charset="utf-8">
+		<meta name="author" content="Vadim Dianov">
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- Custom styles for this template -->
+		<link rel="stylesheet" href="css/main.css">
+	
+	</head>
+	<body data-spy="scroll" data-target=".scroll_bar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-sm-3 sidebar">
+					<nav class="scroll_bar">
+						<ul class="nav">
+							<li><a href="#started">Getting Started</a></li>
+							<li><a href="#structure">Project Structure</a></li>
+							<li><a href="#data">Data & Images</a></li>
+							<li><a href="#themes">Color Themes</a></li>
+							<li><a href="#form">Contact forms</a></li>
+							<li><a href="#deploy">Deploying</a></li>
+							<li><a href="#fonts">Fonts</a></li>
+							<li><a href="#dependencies">Dependencies</a></li>
+							<li><a href="#credits">Credits</a></li>
+							<li><a href="#support">Support</a></li>
+						</ul>
+					</nav>
+				</div>
+
+
+				<div class="col-xs-12 col-sm-9 col-sm-offset-3 content">
+					<div class="title">
+						<h1>BuildStar | React Template</h1>
+						<p>Documentation</p>
+					</div>
+
+					<div id="started" class="started">
+						<h2>Getting Started</h2>
+						<p>1. Install recommended version of <a href="https://nodejs.org/en/">Node.js</a></p>
+						<p>2. Use command line (powershell or terminal) to navigate to project root directory</p>
+						<p>3. Run following commands, one after another:</p>
+<pre>
+npm install
+npm start
+</pre>
+						<p>4. In your browser navigate to <b>http://localhost:3000</b></p>
+						<p>5. Thats all! Now you should see your site.</p>
+					</div>
+
+					<div id="structure">
+						<h2>Project Structure</h2>
+						<p>Buildstar is a component-based application. Pages, widgets and elements are in separate files. Third party plugins added as dependencies in Package.json</p>
+						<br>
+						<p><strong>Pages</strong></p>
+<pre>
+Home (src/components/pages/Home/Home.js)
+About (src/components/pages/About/About.js)
+Services (src/components/pages/Services/Services.js)
+Portfolio (src/components/pages/Portfolio/Portfolio.js)
+Blog (src/components/pages/Blog/Blog.js)
+Contacts (src/components/pages/Contacts/Contacts.js)
+</pre>		
+					<br>
+					<p><strong>Components</strong></p>
+					<p>Layouts:</p>
+<pre>
+src/components/layouts
+</pre>
+					<p>UI components:</p>
+<pre>
+src/components/ui
+</pre>
+
+					<p>Widgets & Sections:</p>
+<pre>
+src/components/widgets
+</pre>
+					<p>Elements:</p>
+<pre>
+src/components/elements
+</pre>
+					<br>
+					<p><strong>SCSS Styles</strong></p>
+					<p>Each component has its own stylesheet, which lay in the same folder as the component with name:</p>
+<pre>
+&lt;component-name&gt;.module.scss
+</pre>
+					<p>Global styles and variables you can find here:</p>
+<pre>
+src/index.scss
+</pre>
+					</div>
+
+					<div id="data">
+						<h2>Data & Images</h2>
+						<p>By default this template use Axios to fetch data from database or localy using Mock Adapter. Inside this project you already have pre-compiled database with dummy texts and image placeholders. You can find it here:</p>
+<pre>
+src/state/database.js
+</pre>	
+<p>If you want to use real database, you need to upload data from this file on your server as .json file and change get request in state.js file</p>
+<pre>
+src/state/state.js
+
+try {
+	const response = await axios.get(
+	  "PUT LINK TO JSON FILE HERE"
+	);
+. . .
+</pre>	
+					<br>						
+					<p><strong>Template data</strong></p>			
+					<p>All information structured as json file, you can easily change, add or remove components/data by changing respective piece of document</p>					
+					
+<pre>
+choose: {
+list: [
+{
+   icon: icon,
+   text:
+   "Phosfluorescently re-engineer frictionless metrics via premier niches. Seamlessly cultivate high-quality niches whereas empowered processes",
+},
+{
+   icon: icon,
+   text:
+   "Seamlessly grow enabled scenarios without viral channels. Appropriately actualize stand-alone benefits and viral imperatives",
+},
+{
+  // You can chage existing data or add new block - the template will adjust accordingly
+}
+. . .
+</pre>
+					<br>						
+					<p><strong>Images</strong></p>	
+					<p>All images and icons was taken from free sources (Unsplash.com, Flaticons.com). Because of copyright rules images and icons was replaced with placholders. You can easily change them with your own or request links from us. To replace placeholder with you own image/icon set the absolute path in relevant field of database: </p>
+<pre>
+services: [
+  {
+    full:
+      "Continually incubate standards compliant customer service rather than professional initiatives. Intrinsicly whiteboard web-enabled potentialities via team building supply chains. Collaboratively integrate granular innovation and performance based intellectual capital. Compellingly redefine multimedia based paradigms for high-quality portals. Quickly build out-of-the-box e-tailers for customer directed opportunities.",
+    icon: Put link to icon image here,
+    id: 0,
+    img: Put link to photo here
+. . .
+</pre>	
+					</div>
+
+					<div id="themes">
+						<h2>Color Themes</h2>
+						<p>You can change main color by changing relevant variable inside <b>src/state/theme.js</b> file:</p>
+<pre>
+export default {
+  color: "#ffc526" - change this to change main color
+};
+</pre>
+					</div>
+					<div id="form">
+						<h2>Contact forms</h2>
+						<p>This project uses the service <a href="https://www.emailjs.com/">EmailJS</a> to work with contact form. It has versy simple and intuitive set up. All you need to do is create your own account and connect email with service. And then just put your own identification data in template code:</p>
+					
+<pre>
+emailjs.send(
+  "Service ID",
+  "Template ID",
+  templateParams,
+  "User ID"
+)
+</pre>
+					</div>
+					<div id="deploy">
+						<h2>Deploying</h2>
+						<p>Easiest way to deploy react-based project is <a href="https://firebase.google.com">Google Firebase</a>, but you can use whichever hosting you like (some steps or setting might be different however). Here is the steps to deploy project in Google Firebase hosting:</p>
+<pre>
+Create new project in Google Firebase console.
+Run "npm run build" command in your terminal.
+Run "npm install -g firebase-tools" command.
+Run "firebase login" command and log in to your account in Google
+Run "firebase init command":
+	- Choose "Hosting: Configure and deploy Firebase Hosting sites"
+	- Choose project that you created in previos step
+	- Choose "build" as public directory
+	- Choose "yes" and configure as a single-page app
+	- Choose "no" when asked to overwrite existing index.html
+Run "firebase deploy"
+Done. Now you get link to deployed project in Google Firebase hosting.
+
+You can also assign your own domain, just check hosting details for steps.
+</pre>					
+					</div>
+					<div id="fonts">
+						<h2>Fonts</h2>
+						<p>By default this template use <a href="https://fonts.google.com/specimen/Poppins">Poppins</a> font, you can change it in <b>public/index.html</b>:</p>
+<pre>
+&lt;link
+href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800&display=swap"
+rel="stylesheet"
+/&gt;	
+</pre>
+						<p>Icon font <a href="https://icons8.com/line-awesome">Line Awesome</a> added as dependency in <b>package.json</b>. You can use it in the following way:</p>
+<pre>
+&lt;i className="las la-phone-volume"&gt;&lt;/i&gt;    -- all possible icon classes can be found on offsite (link above)
+</pre>
+					</div>
+					<div id="dependencies">
+						<h2>Dependencies</h2>
+						<p>Following list of dependencies will be installed automatically after you run <b>npm install</b> command:</p>
+<pre>
+"dependencies": {
+	"axios": "^0.19.2",
+	"axios-mock-adapter": "^1.18.1",
+	"emailjs-com": "^2.4.1",
+	"line-awesome": "^1.3.0",
+	"node-sass": "^4.13.1",
+	"react": "^16.13.0",
+	"react-app-polyfill": "^1.0.6",
+	"react-dom": "^16.13.0",
+	"react-router": "^5.1.2",
+	"react-router-dom": "^5.1.2",
+	"react-scripts": "3.4.0",
+	"react-scroll": "^1.7.16",
+	"react-slick": "^0.25.2",
+	"react-stonecutter": "^0.3.10"
+},
+</pre>
+
+				</div>
+				<div id="credits">
+					<h2>Credits</h2>
+					<ul>
+						<li><a href="https://unsplash.com">Unsplash</a></li>
+						<li><a href="https://icons8.com/line-awesome">Line Awesome</a></li>
+						<li><a href="https://www.npmjs.com/package/react">React</a></li>
+						<li><a href="https://www.npmjs.com/package/react-dom">ReactDOM</a></li>
+						<li><a href="https://www.npmjs.com/package/react-router-dom">ReactRouterDOM</a></li>
+						<li><a href="https://www.npmjs.com/package/node-sass">Node SASS</a></li>
+						<li><a href="https://www.emailjs.com/docs/examples/reactjs">EmailJS</a></li>
+						<li><a href="https://www.npmjs.com/package/react-scroll">React Scroll</a></li>
+						<li><a href="https://react-slick.neostack.com">React Slick</a></li>
+						<li><a href="https://www.npmjs.com/package/react-stonecutter">React Stonecutter</a></li>
+					</ul>
+			</div>
+			<div id="support">
+				<h2>Support</h2>
+				<p>If you have any questions, feel free to contact me at <a href="mailto:vadimdianov@bk.ru">vadimdianov@bk.ru</a></p>
+		</div>
+
+		<script src="js/jquery-2.2.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

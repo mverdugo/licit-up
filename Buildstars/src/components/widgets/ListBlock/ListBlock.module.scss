@@ -1,0 +1,126 @@
+.content h2 {
+    max-width: 40rem;
+}
+
+.list li {
+    background: rgb(245, 245, 245);
+    padding: 3rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    transition: all .3s ease;
+
+    &:hover {
+        background: rgb(235, 235, 235);
+    }
+
+    &:first-of-type {
+        margin-top: 3rem;
+    }
+
+    &:last-of-type {
+        margin-bottom: 5rem;
+    }
+
+    &:nth-of-type(2) {
+        transform: translateX(5rem);
+    }
+
+    &:nth-of-type(3) {
+        transform: translateX(10rem);
+    }
+
+    & img {
+        width: 4rem;
+        height: 4rem;
+        margin-right: 3rem;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1rem;
+    justify-content: space-between;
+
+    & li {
+        flex-basis: calc(33.33333% - 3rem);
+        flex-grow: 1;
+        padding: 4rem 0;
+        border: 2px solid;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        transition: all .3s ease;
+
+        & span {
+            font-size: 4rem;
+            font-weight: 500;
+        }
+
+        & p {
+            text-transform: uppercase;
+            color: #000;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .list li {
+        &:nth-of-type(2) {
+            transform: translateX(0);
+        }
+
+        &:nth-of-type(3) {
+            transform: translateX(0);
+        }
+
+        &:last-of-type {
+            margin-bottom: 4rem;
+        }
+    }
+
+    .row li span {
+        font-size: 3rem;
+    }
+
+    .row li {
+        padding: 2rem 0;
+    }
+}
+
+@media(max-width: 576px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+
+        & h2 {
+            max-width: 100%;
+        }
+    }
+
+    .list li {
+        flex-direction: column;
+        text-align: center;
+
+        &:first-of-type {
+            margin-top: 1.5rem;
+        }
+
+        & img {
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .row li {
+        flex-basis: calc(50% - 3rem);
+        flex-grow: 1;
+    }
+}

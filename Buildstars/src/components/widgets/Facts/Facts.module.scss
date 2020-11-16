@@ -1,0 +1,48 @@
+.header {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 3rem 2rem;
+  background: #fff;
+  box-shadow: 2px 1px 25px 5px rgba(55, 60, 78, 0.05);
+  transition: all 0.5s ease;
+  cursor: default;
+  height: 100%;
+
+  &:hover {
+    background: transparent;
+    box-shadow: 2px 1px 25px 5px rgba(55, 60, 78, 0);
+  }
+
+  & h4 {
+    width: 100%;
+  }
+
+  & p {
+    margin-bottom: 2rem;
+  }
+
+  & i {
+    font-size: 3rem;
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .dummy {
+    display: none;
+  }
+
+  .header {
+    text-align: center;
+    align-items: center;
+
+    & h2 {
+      margin-bottom: 0;
+    }
+  }
+}

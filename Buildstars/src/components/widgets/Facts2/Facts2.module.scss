@@ -1,0 +1,86 @@
+.card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 3rem;
+    margin-bottom: 5rem;
+    border: 1px solid #ccc;
+    transition: all .3s ease;
+
+    &:hover {
+        border-color: rgb(245, 245, 245);
+        box-shadow: 0 0.2rem 0.8rem rgba(36, 36, 36, 0.15);
+        transform: translateY(-1rem);
+    }
+
+    & figure {
+        width: 4rem;
+        margin-bottom: 1rem;
+
+        & img {
+            width: 4rem;
+        }
+    }
+
+    & h2 {
+        margin-bottom: 1rem;
+        font-size: 5rem;
+        font-weight: 300;
+        transition: all .3s ease;
+    }
+
+    & span {
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    & p {
+        width: 100%;
+    }
+}
+
+.footer {
+    color: #fff;
+    padding: 6rem 3rem;
+    transform: translateY(7rem);
+    margin-top: -7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    & h2 {
+        font-weight: 200;
+        max-width: 50rem;
+        line-height: 1.5;
+
+        & b {
+            font-weight: 500;
+        }
+    }
+}
+
+.header {
+    margin-top: 8rem;
+}
+
+@media(max-width:768px) {
+
+    .wrapper:not(:last-of-type) .card {
+        margin-bottom: 0;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .wrapper:last-of-type .card {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer {
+        padding: 3rem;
+    }
+}

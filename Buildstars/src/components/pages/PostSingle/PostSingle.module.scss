@@ -1,0 +1,201 @@
+.article p {
+    margin-bottom: 2rem;
+}
+
+.quote {
+    margin: 4rem 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    display: block;
+    border-left: 1px solid;
+    padding-left: 3rem;
+}
+
+.image {
+    height: 500px;
+    margin-right: 5rem;
+}
+
+.lead {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+.breadcrumbs {
+    background: rgb(245, 245, 245);
+    padding: 4rem;
+    margin-top: 11rem;
+    display: flex;
+    align-items: center;
+
+    & a,
+    & span {
+        font-size: 1.4rem;
+    }
+
+    & a {
+        font-weight: 600;
+        color: inherit;
+        transition: all .3s ease;
+
+        &:hover {
+            color: #666;
+        }
+    }
+
+    & span {
+        font-weight: 300;
+        color: #000;
+    }
+
+    & i {
+        font-size: 1.6rem;
+    }
+
+    &>* {
+        margin-right: 1.5rem;
+    }
+}
+
+.author {
+    max-width: 80rem;
+    padding-top: 4rem;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+
+    & .photo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 5rem;
+
+        & figure {
+            width: 120px;
+            height: 120px;
+            background-color: #ccc;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        & .social {
+            margin-top: 2rem;
+
+            & i {
+                font-size: 1.8rem;
+                margin: 0 .6rem;
+                cursor: pointer;
+                transition: all .3s ease;
+
+                &:hover {
+                    color: #ccc;
+                }
+            }
+        }
+    }
+
+    & .info {
+        & h3 {
+            font-weight: 500;
+        }
+    }
+}
+
+
+.card {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10rem;
+
+    &:hover figure {
+        transform: scale(1.2);
+    }
+
+
+    & figure {
+        height: 200px;
+        width: 100%;
+        box-shadow: inset 0 0 0 1000px rgba(#000, 0.6);
+        transition: all 1s ease;
+    }
+
+    & span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-bottom: 2px solid;
+        padding-bottom: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image {
+        height: 400px;
+        margin-right: 0;
+    }
+
+    .breadcrumbs {
+        padding: 2rem;
+        margin-top: 11rem;
+
+        & a,
+        & span {
+            font-size: 1.2rem;
+        }
+
+
+        & i {
+            font-size: 1.4rem;
+        }
+
+        &>* {
+            margin-right: 1rem;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .image {
+        height: 300px;
+    }
+
+    .breadcrumbs {
+        padding: 1rem 2rem;
+        margin-top: 7rem;
+        flex-wrap: wrap;
+
+        & a {
+            line-height: 2;
+        }
+    }
+
+    .card {
+        margin-bottom: 2rem;
+
+        &:last-of-type {
+            margin-bottom: 5rem;
+        }
+    }
+
+    .author {
+        flex-direction: column;
+        margin-bottom: 7rem;
+        text-align: center;
+
+        & .photo {
+            margin-right: 0;
+            margin-bottom: 3rem;
+        }
+    }
+}
