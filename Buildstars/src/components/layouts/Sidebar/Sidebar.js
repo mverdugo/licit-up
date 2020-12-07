@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Sidebar.module.scss";
 import { useCustomState } from "../../../state/state";
-import { Button, Link, Logo } from "../../elements";
+import { Button, Link, LogoSidebar } from "../../elements";
 import { Backdrop } from "../../ui";
 import THEME from "../../../state/theme";
 
@@ -84,13 +84,13 @@ export default ({ data = [] }) => {
           />
         </div>
         <div className={styles.logo}>
-          <Logo />
+          <LogoSidebar />
         </div>
 
         <ul className={styles.menu}>{menu}</ul>
         <div className={styles.btn_contacts}>
           <Button hoverType="solid-gray-tb" click={toogleModal}>
-            Get Quote
+            Suscribirse
           </Button>
         </div>
       </div>

@@ -1,0 +1,21 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <GoCodeStyleSettings>
+      <option name="ADD_PARENTHESES_FOR_SINGLE_IMPORT" value="true" />
+    </GoCodeStyleSettings>
+    <GroovyCodeStyleSettings>
+      <option name="ALIGN_MULTILINE_LIST_OR_MAP" value="false" />
+      <option name="ALIGN_NAMED_ARGS_IN_MAP" value="false" />
+      <option name="IMPORT_ANNOTATION_WRAP" value="0" />
+    </GroovyCodeStyleSettings>
+    <codeStyleSettings language="Groovy">
+      <option name="KEEP_FIRST_COLUMN_COMMENT" value="false" />
+      <option name="KEEP_SIMPLE_BLOCKS_IN_ONE_LINE" value="true" />
+      <option name="KEEP_MULTIPLE_EXPRESSIONS_IN_ONE_LINE" value="true" />
+      <indentOptions>
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+        <option name="LABEL_INDENT_SIZE" value="4" />
+      </indentOptions>
+    </codeStyleSettings>
+  </code_scheme>
+</component>

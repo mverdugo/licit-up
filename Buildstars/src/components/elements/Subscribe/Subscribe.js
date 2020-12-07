@@ -21,7 +21,7 @@ export default () => {
 
   const onSubmit = () => {
     if (!validateEmail(email)) {
-      setStatus("Incorrect email address");
+      setStatus("Formato de mail incorrecto");
       return;
     }
 
@@ -31,11 +31,11 @@ export default () => {
       .then(
         (response) => {
           setSending(false);
-          setStatus("Your message has been sent!");
+          setStatus("Su mensaje ha sido enviado!");
         },
         (err) => {
           setSending(false);
-          setStatus("Sorry. There is an error: " + err.text);
+          setStatus("A ocurrido un error al enviar su mensaje: " + err.text);
         }
       );
     setEmail("");

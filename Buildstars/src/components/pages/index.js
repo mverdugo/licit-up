@@ -3,7 +3,6 @@ import HomeParalax from "./Home/HomeParalax";
 import HomeVideo from "./Home/HomeVideo";
 import About from "./About/About";
 import Services from "./Services/Services";
-import Portfolio from "./Portfolio/Portfolio";
 import Contacts from "./Contacts/Contacts";
 import Blog from "./Blog/Blog";
 import PostSingle from "./PostSingle/PostSingle";
@@ -17,7 +16,6 @@ export {
   HomeVideo,
   About,
   Services,
-  Portfolio,
   Contacts,
   Blog,
   PostSingle,
