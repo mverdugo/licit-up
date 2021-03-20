@@ -1,4 +1,5 @@
 {
+  "homepage": "https://mverdugo.github.io/licit-up",
   "name": "cctv",
   "version": "0.1.0",
   "private": true,
@@ -34,7 +35,9 @@
     "eject": "react-scripts eject",
     "watch": "npm-watch",
     "start-dev": "NODE_ENV=development NODE_HTTPS=true nodemon ./src/index.js",
-    "start-e2e-server": "NODE_TEST=e2e NODE_ENV=test NODE_HTTPS=true node ./index.js"
+    "start-e2e-server": "NODE_TEST=e2e NODE_ENV=test NODE_HTTPS=true node ./index.js",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
