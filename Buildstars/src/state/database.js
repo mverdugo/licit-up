@@ -3,9 +3,10 @@ import Mock from "./mock";
 const photo = require("../assets/placeholders/photo.jpg");
 const logotype = require("../assets/placeholders/logotype.png");
 const icon = require("../assets/placeholders/icon.svg");
+const family_filters = require("./databaseStructs/familyfilters")
 
 const database = {
-  categories: [
+  blog_categories: [
     {
       id: "0",
       title: "Product",
@@ -95,25 +96,26 @@ const database = {
       title: "1.8k",
     },
   ],
+  document_type: [
+      "RUT",
+      "CI",
+  ],
+  family_filters,
   fast_links: [
     {
-      title: "Homepage",
+      title: "Inicio",
       url: "/home",
     },
     {
-      title: "About company",
+      title: "Sobre Nosotros",
       url: "/about-us",
     },
     {
-      title: "Our services",
+      title: "Preguntas Frecuentes",
       url: "/services",
     },
     {
-      title: "Become a partner",
-      url: "/blog/post_3",
-    },
-    {
-      title: "Contact us",
+      title: "Contactos",
       url: "/contacts",
     },
   ],
@@ -176,7 +178,7 @@ const database = {
   },
   menu: [
     {
-      children: [
+     /* children: [
         {
           name: "Slider Header",
           url: "/",
@@ -189,50 +191,20 @@ const database = {
           name: "Video Background",
           url: "/home-video",
         },
-      ],
-      name: "Home",
+      ],*/
+      name: "Inicio",
       url: "/",
     },
     {
-      name: "About us",
+      name: "Sobre nosotros",
       url: "/about-us",
     },
     {
-      name: "Services",
-      url: "/services",
+      name: "Preguntas Frecuentes",
+      url: "/faq",
     },
     {
-      name: "Portfolio",
-      url: "/portfolio",
-    },
-    {
-      children: [
-        {
-          name: "Grid Left Sidebar",
-          url: "/blog-grid-left-sidebar",
-        },
-        {
-          name: "List Left Sidebar",
-          url: "/blog-list-left-sidebar",
-        },
-        {
-          name: "Grid Right Sidebar",
-          url: "/blog-grid-right-sidebar",
-        },
-        {
-          name: "List Right Sidebar",
-          url: "/blog-list-right-sidebar",
-        },
-        {
-          name: "Grid No Sidebar",
-          url: "blog-grid-without-sidebar",
-        },
-      ],
-      name: "Blog",
-      url: "/blog-grid-left-sidebar",
-    },
-    {
-      name: "Contacts",
+      name: "Contactos",
       url: "/contacts",
     },
   ],

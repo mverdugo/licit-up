@@ -7,13 +7,11 @@ import {
   HomeVideo,
   About,
   Services,
-  Portfolio,
   Contacts,
   Blog,
   PostSingle,
   ServiceSingle,
   MemberCard,
-  PortfolioSingle
 } from "./components/pages";
 import { Header, Sidebar, Footer } from "./components/layouts";
 import { ModalForm, ModalVideo, RequestForm } from "./components/ui";
@@ -43,7 +41,6 @@ export default () => {
             <Route path="/home-video" exact component={HomeVideo} />
             <Route path="/about-us" exact component={About} />
             <Route path="/services" exact component={Services} />
-            <Route path="/portfolio" exact component={Portfolio} />
             <Route path="/contacts" exact component={Contacts} />
             <Route path="/blog/:post_id" exact component={PostSingle} />
             <Route
@@ -52,11 +49,6 @@ export default () => {
               component={ServiceSingle}
             />
             <Route path="/team/:member_id" exact component={MemberCard} />
-            <Route
-              path="/portfolio/:project_id"
-              exact
-              component={PortfolioSingle}
-            />
 
             <Route path="/blog/cats/:category" exact>
               <Blog sidebar="left" layout="grid" />

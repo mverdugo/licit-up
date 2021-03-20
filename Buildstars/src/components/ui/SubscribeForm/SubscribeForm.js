@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import styles from "./ContactForm.module.scss";
+import styles from "./SubscribeForm.module.scss";
 import { CardButton } from "../../ui";
 import { Spinner } from "../../elements";
+import {useCustomState} from "../../../state/state";
 
 export default ({ style }) => {
+  const state = useCustomState()[0];
+
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState("");
   const [error, setError] = useState(false);
@@ -14,6 +17,7 @@ export default ({ style }) => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [preferedCheck, setPreferedCheck] = useState(false);
+  //const [selectedFamily, setSelectedFamily] = useState({})
 
   const templateParams = {
     name: name,
@@ -28,21 +32,25 @@ export default ({ style }) => {
     return re.test(email);
   };
 
+  const setFamilyValue = () => {
+
+  }
+
   const onSubmit = () => {
     if (name === "") {
-      setStatus("Please enter your name");
+      setStatus("Por favor, ingrese su nombre");
       setError(true);
       return;
     }
 
     if (!validateEmail(email)) {
-      setStatus("Incorrect email address");
+      setStatus("Formato de mail es incorrecto");
       setError(true);
       return;
     }
 
     if (phone === "") {
-      setStatus("Please enter your phone");
+      setStatus("Por favor, ingrese un número de teléfono");
       setError(true);
       return;
     }
@@ -59,12 +67,12 @@ export default ({ style }) => {
         (response) => {
           setSending(false);
           setError(false);
-          setStatus("Your message has been sent!");
+          setStatus("¡Su suscripción a sido completada!");
         },
         (err) => {
           setSending(false);
           setError(true);
-          setStatus("Sorry. There is an error: " + err.text);
+          setStatus("Ups, ha ocurrido un error: " + err.text);
         }
       );
     resetForm();
@@ -90,7 +98,7 @@ export default ({ style }) => {
       <CardButton
         click={onSubmit}
         btn_after="&#xf107;"
-        btn_text="Send message"
+        btn_text="Confirmar Suscripción"
         btn_type="solid-color-tb"
         btn_hoverType="solid-gray-tb"
         btn_align="stretch"
@@ -100,33 +108,59 @@ export default ({ style }) => {
           <span className={[styles.status, error && styles.error].join(" ")}>
             {status}
           </span>
-          <h4>Send as a message:</h4>
+          <h4>Formulario de Suscripción:</h4>
           <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            type="text"
-            placeholder="Your name *"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              type="text"
+              placeholder="Nombre completo *"
+          />
+          <div>
+            <p>Seleccione su tipo de documento</p>
+            <select className={styles.select_family} onChange={setFamilyValue()}>
+              {
+                state.data.document_type.map((type) => (
+                    <option value={type}>{type}</option>
+                ))
+              }
+            </select>
+          </div>
+          <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              type="text"
+              placeholder="Número de documento *"
           />
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            placeholder="Email address *"
+            placeholder="Dirección de mail *"
           />
           <input
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             type="text"
-            placeholder="Phone number *"
+            placeholder="Numero de teléfono *"
           />
+          <div>
+            <p>Rubro al que pertenece</p>
+            <select className={styles.select_family} onChange={setFamilyValue()}>
+              {
+                state.data.family_filters.default.map((family) => (
+                    <option value={family.id}>{family.name}</option>
+                ))
+              }
+            </select>
+          </div>
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            rows="10"
-            placeholder="Enter your message"
+            rows="3"
+            placeholder="Palabras claves para filtrado de licitaciones"
           />
           <label className={styles.checkbox_group}>
-            <p>Email prefered way to contact</p>
+            <p>Acepto Terminos y condiciones</p>
             <input
               onChange={() => setPreferedCheck(!preferedCheck)}
               type="checkbox"

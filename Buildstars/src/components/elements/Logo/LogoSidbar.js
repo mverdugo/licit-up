@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Logo.module.scss";
 import THEME from "../../../state/theme";
-import logo from "../../../image/licitupsinfondo.png";
+import logo from "../../../image/licitupfondoblanco.png";
 
 export default ({ dark }) => (
   <figure
