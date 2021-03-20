@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f46fdbf8abd6cc1e9601c5e6dec2a9fd",
+    "revision": "8e66c9715c5c2f49be782f46c2dc1420",
     "url": "/licit-up/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/licit-up/static/css/2.f385660a.chunk.css"
   },
   {
-    "revision": "adef20137e1554b492e7",
+    "revision": "f6d5102c61e43ac94818",
     "url": "/licit-up/static/css/main.2aa65cc9.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/licit-up/static/js/2.706f69fc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "adef20137e1554b492e7",
-    "url": "/licit-up/static/js/main.178296e0.chunk.js"
+    "revision": "f6d5102c61e43ac94818",
+    "url": "/licit-up/static/js/main.8bddc082.chunk.js"
   },
   {
     "revision": "3f45e8f8728d7a8c2a39",
