@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "22348132897f74c1b3c788097d331a87",
+    "revision": "f46fdbf8abd6cc1e9601c5e6dec2a9fd",
     "url": "/licit-up/index.html"
   },
   {
-    "revision": "206899588fc08cf92dfb",
+    "revision": "4505727f96eac4447b27",
     "url": "/licit-up/static/css/2.f385660a.chunk.css"
   },
   {
-    "revision": "affd20062775d38d3c2c",
+    "revision": "adef20137e1554b492e7",
     "url": "/licit-up/static/css/main.2aa65cc9.chunk.css"
   },
   {
-    "revision": "206899588fc08cf92dfb",
-    "url": "/licit-up/static/js/2.2bc3a184.chunk.js"
+    "revision": "4505727f96eac4447b27",
+    "url": "/licit-up/static/js/2.706f69fc.chunk.js"
   },
   {
     "revision": "986666aead889c5081c1e6e7b5ae8884",
-    "url": "/licit-up/static/js/2.2bc3a184.chunk.js.LICENSE.txt"
+    "url": "/licit-up/static/js/2.706f69fc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "affd20062775d38d3c2c",
-    "url": "/licit-up/static/js/main.8b509a56.chunk.js"
+    "revision": "adef20137e1554b492e7",
+    "url": "/licit-up/static/js/main.178296e0.chunk.js"
   },
   {
-    "revision": "559566b1388f99f8907d",
-    "url": "/licit-up/static/js/runtime-main.90f33896.js"
+    "revision": "3f45e8f8728d7a8c2a39",
+    "url": "/licit-up/static/js/runtime-main.73999fd1.js"
   },
   {
     "revision": "69f3d863dc5111dcfe5104d89899d893",
