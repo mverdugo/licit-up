@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/licit-up/static/css/main.2aa65cc9.chunk.css",
-    "main.js": "/licit-up/static/js/main.178296e0.chunk.js",
-    "main.js.map": "/licit-up/static/js/main.178296e0.chunk.js.map",
+    "main.js": "/licit-up/static/js/main.8bddc082.chunk.js",
+    "main.js.map": "/licit-up/static/js/main.8bddc082.chunk.js.map",
     "runtime-main.js": "/licit-up/static/js/runtime-main.73999fd1.js",
     "runtime-main.js.map": "/licit-up/static/js/runtime-main.73999fd1.js.map",
     "static/css/2.f385660a.chunk.css": "/licit-up/static/css/2.f385660a.chunk.css",
     "static/js/2.706f69fc.chunk.js": "/licit-up/static/js/2.706f69fc.chunk.js",
     "static/js/2.706f69fc.chunk.js.map": "/licit-up/static/js/2.706f69fc.chunk.js.map",
     "index.html": "/licit-up/index.html",
-    "precache-manifest.744fd548ad3b6521b3096acaf3f06f9d.js": "/licit-up/precache-manifest.744fd548ad3b6521b3096acaf3f06f9d.js",
+    "precache-manifest.7705bab04d576b57ec7653579047de99.js": "/licit-up/precache-manifest.7705bab04d576b57ec7653579047de99.js",
     "service-worker.js": "/licit-up/service-worker.js",
     "static/css/2.f385660a.chunk.css.map": "/licit-up/static/css/2.f385660a.chunk.css.map",
     "static/css/main.2aa65cc9.chunk.css.map": "/licit-up/static/css/main.2aa65cc9.chunk.css.map",
@@ -24,6 +24,6 @@
     "static/css/2.f385660a.chunk.css",
     "static/js/2.706f69fc.chunk.js",
     "static/css/main.2aa65cc9.chunk.css",
-    "static/js/main.178296e0.chunk.js"
+    "static/js/main.8bddc082.chunk.js"
   ]
 }
