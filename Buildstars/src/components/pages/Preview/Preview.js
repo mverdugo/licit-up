@@ -232,22 +232,6 @@ export default () => {
               <h3>About Us</h3>
             </div>
           </Link>
-          <Link to="/services">
-            <div className={styles.demo}>
-              <figure
-                style={{ background: "url(" + demo5 + ") center/cover" }}
-              />
-              <h3>Services</h3>
-            </div>
-          </Link>
-          <Link to="/portfolio">
-            <div className={styles.demo}>
-              <figure
-                style={{ background: "url(" + demo6 + ") center/cover" }}
-              />
-              <h3>Portfolio</h3>
-            </div>
-          </Link>
           <Link to="/blog-grid-left-sidebar">
             <div className={styles.demo}>
               <figure
@@ -286,14 +270,6 @@ export default () => {
                 style={{ background: "url(" + demo11 + ") center/cover" }}
               />
               <h3>Team Card</h3>
-            </div>
-          </Link>
-          <Link to="/portfolio/0">
-            <div className={styles.demo}>
-              <figure
-                style={{ background: "url(" + demo12 + ") center/cover" }}
-              />
-              <h3>Project Card</h3>
             </div>
           </Link>
           <Link to="/blog/post_0">

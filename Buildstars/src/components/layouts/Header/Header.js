@@ -61,11 +61,10 @@ export default ({ data = [] }) => {
         <div className={styles.btn_desktop}>
           <Button
             after="&#xf107;"
-            type="outline-white-tw"
             hoverType="solid-white-tb"
             click={() => actions.toogleModal()}
           >
-            Get Quote
+            Suscribirse
           </Button>
         </div>
 

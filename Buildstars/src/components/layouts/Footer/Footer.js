@@ -33,33 +33,26 @@ export default () => {
         <div className={styles.logo_area}>
           <Logo dark />
           <p>
-            Efficiently productivate adaptive testing after strategic
-            experiences dramatically through client-centric potentialities.
+            Tambien podes encontrarnos en nuestras distintas redes.
           </p>
           <div className={styles.social}>
             <i className="lab la-facebook-f" />
-            <i className="lab la-twitter" />
             <i className="lab la-linkedin-in" />
           </div>
         </div>
 
         <div className={styles.link_area}>
           <div className={styles.links}>
-            <h4>Services</h4>
-            {servicesList}
-          </div>
-          <div className={styles.links}>
-            <h4>Fast Links</h4>
+            <h4>Accesos Rapidos</h4>
             {linkList}
           </div>
         </div>
 
         <div className={styles.subscribe}>
-          <h4>Newsletter</h4>
+          <h4>¿Queres saber mas de nosotros?</h4>
           <Subscribe />
           <p>
-            Productivate adaptive testing after strategic experiences
-            dramatically through.
+            Dejanos tu mail que nuestro departamento comercial se comunicará contigo.
           </p>
         </div>
       </div>

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@progress/kendo-react-dropdowns": "^4.1.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -11,21 +12,29 @@
     "emailjs-com": "^2.4.1",
     "line-awesome": "^1.3.0",
     "node-sass": "^4.14.1",
+    "npm-watch": "^0.7.0",
     "react": "^16.13.0",
     "react-app-polyfill": "^1.0.6",
     "react-dom": "^16.13.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0",
+    "react-scripts": "^3.4.0",
     "react-scroll": "^1.7.16",
     "react-slick": "^0.25.2",
-    "react-stonecutter": "^0.3.10"
+    "react-stonecutter": "^0.3.10",
+    "start": "^5.1.0"
+  },
+  "watch": {
+    "test": "{src}/*.js"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch": "npm-watch",
+    "start-dev": "NODE_ENV=development NODE_HTTPS=true nodemon ./src/index.js",
+    "start-e2e-server": "NODE_TEST=e2e NODE_ENV=test NODE_HTTPS=true node ./index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.1.0",
+    "react-dropdown": "^1.9.0"
   }
 }
