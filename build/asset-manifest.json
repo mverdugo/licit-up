@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/licit-up/static/css/main.2aa65cc9.chunk.css",
+    "main.js": "/licit-up/static/js/main.8bddc082.chunk.js",
+    "main.js.map": "/licit-up/static/js/main.8bddc082.chunk.js.map",
+    "runtime-main.js": "/licit-up/static/js/runtime-main.73999fd1.js",
+    "runtime-main.js.map": "/licit-up/static/js/runtime-main.73999fd1.js.map",
+    "static/css/2.f385660a.chunk.css": "/licit-up/static/css/2.f385660a.chunk.css",
+    "static/js/2.706f69fc.chunk.js": "/licit-up/static/js/2.706f69fc.chunk.js",
+    "static/js/2.706f69fc.chunk.js.map": "/licit-up/static/js/2.706f69fc.chunk.js.map",
+    "index.html": "/licit-up/index.html",
+    "precache-manifest.7705bab04d576b57ec7653579047de99.js": "/licit-up/precache-manifest.7705bab04d576b57ec7653579047de99.js",
+    "service-worker.js": "/licit-up/service-worker.js",
+    "static/css/2.f385660a.chunk.css.map": "/licit-up/static/css/2.f385660a.chunk.css.map",
+    "static/css/main.2aa65cc9.chunk.css.map": "/licit-up/static/css/main.2aa65cc9.chunk.css.map",
+    "static/js/2.706f69fc.chunk.js.LICENSE.txt": "/licit-up/static/js/2.706f69fc.chunk.js.LICENSE.txt",
+    "static/media/icon.svg": "/licit-up/static/media/icon.69f3d863.svg",
+    "static/media/line-awesome.min.css": "/licit-up/static/media/la-solid-900.bb49393b.ttf",
+    "static/media/licitupfondoblanco.png": "/licit-up/static/media/licitupfondoblanco.9617283f.png",
+    "static/media/licitupsinfondo.png": "/licit-up/static/media/licitupsinfondo.956fde6e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.73999fd1.js",
+    "static/css/2.f385660a.chunk.css",
+    "static/js/2.706f69fc.chunk.js",
+    "static/css/main.2aa65cc9.chunk.css",
+    "static/js/main.8bddc082.chunk.js"
+  ]
+}
